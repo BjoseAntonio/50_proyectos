@@ -1,0 +1,112 @@
+:root{
+    /* Colors and fonts */
+    --texto_Primario: 'Oswald', sans-serif;
+    --texto_Sec: 'Lobster', cursive;
+    --color_blanco: #fff;
+    --Color_negro: #000;
+    --Color-borde : #3498db;
+    --color_bordeEm: #383838;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+
+body{
+    background: rgb(28,182,184);
+    background: linear-gradient(0deg, rgba(28,182,184,0.8925945378151261) 68%, rgba(253,106,45,0.8897934173669468) 100%);
+    background-repeat: no-repeat;
+    font-family: var(--texto_Sec);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;/*Extencion de la pantalla para aplicar toda la propiedad*/
+    overflow: hidden;
+    margin: 0;
+
+}
+
+
+.container{
+   text-align: center;
+}
+
+.progress-container{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 3rem;
+    max-width: 100%;
+    width: 35rem;
+}
+
+.progress-container::before{
+    content: '';
+    background-color: rgba(0, 0, 0, 0); ;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 10px;
+    width: 100%;
+    z-index: -1;
+}
+
+.progress{
+    background-color: var(--Color-borde);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 10px;
+    width: 0%;
+    z-index: -1;
+    transition: 0.4s ease;
+}
+
+.circle{
+    background-color: var(--color_blanco);
+    color: var(--Color_negro);
+    border-radius: 50%;
+    height: 6rem;
+    width: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 7px solid var(--color_bordeEm);
+    transition: 0.4s ease;
+    font-size: 5rem;
+}
+.circle.active{
+    border-color: var(--Color-borde) ;
+}
+
+.btn{
+    background-color: var(--Color_negro);
+    color: var(--color_blanco);
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: var(--texto_Sec);
+    font-size: 4rem;
+    padding: 8px 30px;
+    margin: 7px;
+}
+
+.btn:active{
+    transform: scale(0.98);
+}
+
+.btn:focus{
+    outline: 0;
+}
+
+.btn:disabled{
+    background-color: var(--color_bordeEm);
+    cursor: not-allowed;
+}
