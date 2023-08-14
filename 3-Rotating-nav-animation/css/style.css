@@ -141,13 +141,13 @@ nav a:hover{
 }
 
 .content small{
-    color: var(--Color-borde);
+    color: var(--Color)--Color_negro;
     font-style: italic;
 }
 
 .content p{
-    color: var(--color_bordeEm);
-    line-height: 1.5;
+    color: var(--color_blanco);
+    line-height: 1.5rem;
 }
 
 
