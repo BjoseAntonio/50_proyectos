@@ -1,0 +1,73 @@
+:root{
+    /* Colors and fonts */
+    --texto_Primario: 'Amatic SC', cursive;
+    --texto_Sec: 'Press Start 2P', cursive;
+    --color_blanco: #fff;
+    --Color_negro: #000;
+    --Color_fondoSec : #3498db;
+    --color_fondo: #900C3F;
+}
+
+/* *{
+    box-sizing: border-box;
+} */
+html{
+     font-size: 62.5%;
+     box-sizing: border-box;
+}
+
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+
+body{
+    background-color: var(--color_fondo);
+    font-family: var(--texto_Primario);display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.search{
+     position: relative;
+     height: 50px;
+}
+
+.search .input{
+    background-color: var(--color_blanco);
+    border: 0;
+    font-size: 1.8rem;
+    padding: 1.5rem;
+    height: 5rem;
+    width: 5rem;
+    transition: width 0.3s ease;
+}
+
+.btn{
+    background-color: var(--color_blanco);
+    border: 0;
+    cursor: pointer;
+    font-size: 2.4rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5rem;
+    width: 5rem;
+    transition: transform 0.3s ease;
+
+}
+
+.btn:focus,
+.input:focus{
+    outline: none;
+}
+
+.search.active .input{
+    width: 20rem;
+}
+
+.search.active .btn{
+    transform: translateX(198px);
+}
